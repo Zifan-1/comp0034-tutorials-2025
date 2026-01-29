@@ -5,6 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "comp0034-activities"
 version = "2025.01"
+requires-python = ">=3.12"
 dependencies = [
     "flask",
     "pandas",

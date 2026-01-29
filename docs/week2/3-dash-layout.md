@@ -211,8 +211,8 @@ import dash_bootstrap_components as dbc
 
 row_one = dbc.Row(
     [
-        dbc.Col(html.Div("Selectors"), width=4),
-        dbc.Col(html.Div("Selectors"), width=8),
+        dbc.Col(html.Div("Selectors", id="selectors"), width=4),
+        dbc.Col(html.Div("Charts", id="chart-display"), width=8),
     ]
 )
 
