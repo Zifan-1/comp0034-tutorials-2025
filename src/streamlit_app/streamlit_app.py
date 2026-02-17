@@ -7,6 +7,7 @@ from src.utils.line_chart import line_chart
 
 
 @st.cache_data
+# Load data
 def load_data():
     """Load paralympics data from mock API into a DataFrame."""
     para_data = get_event_data()
@@ -16,11 +17,11 @@ def load_data():
     return df
 
 
-st.title("Paralympics data")
+st.title("Paralympics1 data")
 
 df = load_data()
 
 st.dataframe(df)
-
+# Line Chart
 chart = line_chart("participants", df)
 st.plotly_chart(chart)

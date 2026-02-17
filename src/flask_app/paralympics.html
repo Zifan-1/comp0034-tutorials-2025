@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask paralympics app</title>
+</head>
+<body>
+
+<h1>Flask paralympics app</h1>
+<h2>Data table</h2>
+
+<table>
+    <thead>
+    <tr>
+        {% for key in data[0].keys() %}
+        <th>{{ key }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for row in data %}
+    <tr>
+        {% for value in row.values() %}
+        <td>{{ value }}</td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2>Line chart</h2>
+{{ plot_html|safe }}
+
+</body>
+</html>
